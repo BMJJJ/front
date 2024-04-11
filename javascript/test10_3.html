@@ -13,25 +13,25 @@
 
     function myFunc() {
       // let name = document.myform.name.value;
-      // let age = document.myform.name.value;
-      // let gender = document.myform.name.value;
-      // let address = document.myform.name.value; 프론트는 대부분 id로 체크한다.
+      // let age = document.myform.age.value;
+      // let gender = document.myform.gender.value;
+      // let address = document.myform.address.value;
       let name = document.getElementById("name").value;
       let age = document.getElementById("age").value;
       let gender = document.getElementById("gender").value;
       let address = document.getElementById("address").value;
-      // alert("성명:"+nmae+",나이:"+age+",성별:"+gender+",주소:"+address);//이게 서버로 넘어가는 값이 된다.
+      //alert("성명:"+name+", 나이:"+age+", 성별:"+gender+", 주소:"+address);
 
       if(name.trim() == "") {
-        alert("성명을 입력하세요!")
+        alert("성명을 입력하세요!");
         document.getElementById("name").focus();
       }
       else if(age.trim() == "") {
-        alert("나이을 입력하세요!")
+        alert("나이를 입력하세요!");
         document.getElementById("age").focus();
       }
       else if(address.trim() == "") {
-        alert("주소를 입력하세요!")
+        alert("주소를 입력하세요!");
         document.getElementById("address").focus();
       }
       else {
@@ -48,13 +48,12 @@
 <body>
 <p><br/></p>
 <div class="container">
-  <h2 class="text-center">본문</h2>
+  <h2 class="text-center">본 문</h2>
   <form name="myform">
     <table class="table table-bordered">
       <tr>
         <th class="table-dark"><label for="name">성명</label></th>
-        <td><input type="text" name="name" id="name" placeholder="이름을 입력하세요" class="form-control" autofocus required /></td>
-        <!-- 공백도 포함이 되는데 그래서 위쪽에 트림으로 걸러내야한다. -->
+        <td><input type="text" name="name" id="name" placeholder="이름을 입력하세요." class="form-control" autofocus required /></td>
       </tr>
       <tr>
         <th class="table-dark"><label for="age">나이</label></th>
@@ -73,7 +72,7 @@
       </tr>
       <tr>
         <td colspan="2" class="text-center">
-          <input type="button" value="전 송" onclick="myFunc()" class="btn btn-success"/> &nbsp;
+          <input type="submit" value="전 송" onclick="myFunc()" class="btn btn-success"/> &nbsp;
           <input type="reset" value="다시입력" class="btn btn-warning"/> &nbsp;
           <input type="button" value="돌아가기" class="btn btn-primary"/>
         </td>

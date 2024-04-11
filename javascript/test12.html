@@ -13,24 +13,27 @@
 
     function fCheck() {
       while(1) {
-      let op = prompt("사용할 연산을 입력하세요?('+'' / '-' / '*'' / '/')");
-      let su1 = prompt("첫번째 수를 입력하세요?");
-      let su2 = prompt("두번째 수를 입력하세요?");
-      let res = eval(su1 + op + su2);
-      alert("계산결과 : " + res);
-      let ans = confirm("작업을 계속합니다.");
-      if(ans) {
-        alert("작업을 계속합니다.");
-      }
-      else { alert("수고하셨습니다.");
-        break;
+        let op = prompt("사용할 연산를 입력하세요?('+' / '-' / '*' / '/')");
+        let su1 = prompt("첫번째 수를 입력하세요?");
+        let su2 = prompt("두번째 수를 입력하세요?");
+        let res = eval(su1 + op + su2);
+        alert("계산결과 : " + res);
+        let ans = confirm("작업을 계속할까요?");
+        if(ans) {
+          alert("작업을 계속합니다.");
+        }
+        else { alert("수고하셨습니다.");
+          break;
+        }
       }
     }
-  }  
   </script>
 </head>
 <body>
+<p><br/></p>
+<div class="container">
   <h2>합계 계산하기</h2>
   <input type="button" value="계산" onclick="fCheck()" class="btn btn-success"/>
+</div>
 </body>
 </html>

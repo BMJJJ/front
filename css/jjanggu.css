@@ -1,0 +1,49 @@
+/* jjanggu.css */
+/* PC화면을 주화면으로 기본설계 처리(최소 1024px 기준) */
+
+/* 공통사항(기본 PC모드출발) */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "맑은 고딕","굴림","돋움","궁서";
+  font-size: 1em;
+  background: linear-gradient(to bottom, skyblue, white 50%);
+  background-attachment: fixed;
+}
+ul li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+/*pc 모드 설정하기*/
+/*문서 전체 */
+#container {
+  width: 960px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+/*타이틀영역(header)*/
+#mainHeader {
+  height: 280px;
+  margin-top: 0px;
+  background-image: url(../css/imgJanggu/짱구분노.jpg);
+}
+
+/*타이틀바의 제목(로고)*/
+#mainHeader h1 {
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+/*타이틀바의 제목(로고) 링크 디자인*/
+.header1 a {
+  color: #ff0;
+  font-size: 2em;
+  text-shadow: 1px 2px 1px #000;
+}
