@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test9_2.html</title>
+  <script>
+    'use strict';
+
+    function calc() {
+      alert("메세지 출력");
+      let su = prompt("수를 입력하세요?");
+      // let res = su + 100;
+      // let res = parseInt(su) + 100;//웹을 통해서 오는것은 문자로 오기 떄문에 변환해줘야 함
+      // let res = Number(su) + 100;
+      let res = eval(su) + 100;//현재 줄 포함 위쪽 parseInt까지 변환하는것은 이렇게 3가지 쓰면 됨
+      alert("res : " + res); //alert는 쉼표가 아니라 +써야함
+    }
+  </script>
+</head>
+<body>
+  <h2>본문</h2>
+  <p>
+    <input type="button" value="계산" onclick="calc()"/>
+  </p>
+</body>
+</html>
